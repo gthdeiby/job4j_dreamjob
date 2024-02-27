@@ -1,0 +1,16 @@
+<div th:fragment="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Job4jDreamJob</a>
+            <div class="collapse navbar-collapse">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="/">Главная</a>
+                    <a class="nav-item nav-link active" th:href="@{/vacancies}">Вакансии</a>
+                    <a class="nav-item nav-link active" th:href="@{/candidates}">Кандидаты</a>
+                    <a class="nav-item nav-link active" th:href="@{/vacancies/create}">Создать вакансию</a>
+                    <a class="nav-item nav-link active" th:href="@{/candidates/create}">Создать резюме</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
