@@ -15,10 +15,15 @@
 <div class="container-fluid p-0">
     <header th:insert="blocks/header :: header"></header>
     <div class="container">
-        <form class="mt-3" th:action="@{/candidates/create}" method="post">
+        <form class="mt-3" th:action="@{/candidates/create}" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="name" class="form-label"><b>Имя</b></label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Введите имя и фамилию, например, Джейсон Стейтем">
+            </div>
+
+            <div class="mb-3">
+                <label for="formFile"><b>Фото</b></label>
+                <input class="form-control form-control-sm w-100" type="file" id="formFile" name="file" required>
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label"><b>Описание</b></label>
