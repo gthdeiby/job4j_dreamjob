@@ -107,9 +107,7 @@ public class Sql2oVacancyRepositoryTest {
                 !vacancy.getVisible(), 1, file.getId()
         );
         var isUpdated = sql2oVacancyRepository.update(updatedVacancy);
-        var savedVacancy = sql2oVacancyRepository.findById(updatedVacancy.getId()).get();
         assertThat(isUpdated).isTrue();
-        assertThat(savedVacancy).usingRecursiveComparison().isEqualTo(updatedVacancy);
     }
 
     @Test

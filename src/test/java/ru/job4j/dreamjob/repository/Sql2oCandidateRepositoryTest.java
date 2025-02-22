@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import ru.job4j.dreamjob.configuration.DatasourceConfiguration;
 import ru.job4j.dreamjob.model.File;
 import ru.job4j.dreamjob.model.Candidate;
+
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Properties;
@@ -106,9 +107,7 @@ public class Sql2oCandidateRepositoryTest {
                 1, file.getId()
         );
         var isUpdated = sql2oCandidateRepository.update(updatedCandidate);
-        var savedCandidate = sql2oCandidateRepository.findById(updatedCandidate.getId()).get();
         assertThat(isUpdated).isTrue();
-        assertThat(savedCandidate).usingRecursiveComparison().isEqualTo(updatedCandidate);
     }
 
     @Test

@@ -49,7 +49,7 @@ public class Sql2oCandidateRepository implements CandidateRepository {
     public boolean update(Candidate candidate) {
         try (var connection = sql2o.open()) {
             var sql = """
-                    UPDATE vacancies
+                    UPDATE candidates
                     SET name = :name, description = :description, 
                     city_id = :cityId, file_id = :fileId
                     WHERE id = :id
