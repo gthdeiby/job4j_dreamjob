@@ -10,9 +10,13 @@
                     <a class="nav-item nav-link active" th:href="@{/vacancies/create}">Создать вакансию</a>
                     <a class="nav-item nav-link active" th:href="@{/candidates/create}">Создать резюме</a>
                 </div>
-                <div class="d-flex">
+                <div class="d-flex" th:if="${user.name == 'Гость'}">
                     <a class="nav-link text-secondary me-3" th:href="@{/users/register}">Регистрация</a>
                     <a class="nav-link text-secondary" th:href="@{/users/login}">Войти</a>
+                </div>
+                <div class="d-flex" th:if="${user.name != 'Гость'}">
+                    <a class="nav-link text-secondary me-3" href="#" th:text="${user.name}"></a>
+                    <a class="nav-link text-secondary" th:href="@{/users/logout}">Выйти</a>
                 </div>
             </div>
         </div>
