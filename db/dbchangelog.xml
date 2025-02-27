@@ -10,4 +10,5 @@
     <include file="scripts/003_ddl_create_files_table.sql" relativeToChangelogFile="true"/>
     <include file="scripts/004_ddl_create_vacancies_table.sql" relativeToChangelogFile="true"/>
     <include file="scripts/005_ddl_create_candidates_table.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/006_ddl_create_users_table.sql" relativeToChangelogFile="true"/>
 </databaseChangeLog>
