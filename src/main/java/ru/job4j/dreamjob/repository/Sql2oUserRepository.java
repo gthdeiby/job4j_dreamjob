@@ -35,8 +35,8 @@ public class Sql2oUserRepository implements UserRepository {
             return Optional.of(user);
         } catch (Exception e) {
             LOG.error("Unique constraint violation. Value already exists.", e);
-            return Optional.empty();
         }
+        return Optional.empty();
     }
 
     @Override
